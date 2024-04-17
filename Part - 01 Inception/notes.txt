@@ -1,0 +1,109 @@
+const heading = document.createElement('h1');
+heading.innerHTML = "Hello world from Javascript";
+
+const rootId = document.getElementById('root');
+rootId.appendChild(heading);
+
+browser knows document , createElement , getElementById ..etc , coz it have js engine , it is all part of browser.
+
+but it doesnt know reactjs.
+
+so we have to configure our project to run react.
+
+First - get react to out project. via - CDN(content delivery network)- react library is hosted there.(read more about cdn).
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+https://unpkg.com/react@18/umd/react.development.js - this have react code , code file of react. main file
+
+https://unpkg.com/react-dom@18/umd/react-dom.development.js - for modification of dom , usefull for dom operation . bridge between react and browsers.
+
+why 2 file?
+
+coz react runs as web app , mobile app , 3d purpose , so it is separated.
+
+Second:
+
+hello world in react
+
+const heaing = React.createElement(tag , object(attributes) , (children) content inside tag);
+
+object - attributes to our tag like id , class or any xyz , this will be consider ad attribute.
+
+    Code:
+
+    <div class="" id="root"></div>
+
+    const heading = React.createElement('h1' , {} , "Hello world from React!"); // first link used
+
+    const root = ReactDOM.createRoot(document.getElementById('root')); // second link used
+
+    root.render(heading); - passing react element , takes object , create that tag and put content inside that and add to root tag.
+
+
+------------------------------------
+
+
+if i console.log(heading) - it gives object , react element(normal js object).
+it have props(children or attributes we pass in object section + content we pass )
+
+React.createElement() - creating an object
+root.render() - converts that object into tag or html code.
+
+React.createElement(tag , object(attributes) , Children or array of children);
+
+children - can be single or array of children , [ ... , ... , ]
+
+const nestedHtml = React.createElement('div' , {id : 'parent'} , 
+    [
+        React.createElement('div' , {id : 'child'} , 
+        [
+            React.createElement('h1' , {className : 'headingTag'} , "This is heading1 inside Nested"),
+            React.createElement('h2' , {className : 'headingTag'} , "This is heading2 inside Nested")
+        
+        ]) ,
+        React.createElement('div' , {id : 'child2'} , 
+        [
+            React.createElement('h1' , {className : 'headingTag'} , "This is heading1 inside Nested"),
+            React.createElement('h2' , {className : 'headingTag'} , "This is heading2 inside Nested")
+        
+        ]) 
+    ]
+)
+
+This is core react code , this looks Clumsy so we have to make to simple using jsx we can do this.
+
+----------------------------------------
+
+<div class="" id="root">
+    <h1>Balaji</h1>
+</div>
+
+if any content already inside root , it will be replaced by render.
+root.render(nestedHtml);
+
+if u refresh just milli second it will be displayed and code replaced by render.
+
+<h3>Top of the root</h3>
+<div class="" id="root">
+    <h1>Balaji</h1>
+</div>
+<h3>below of the root</h3>
+
+react can be applied to small portion of our page , like here we applied only for root.
+react is library , can be independently work in small portion of code.
+
+---------------
+
+1. hello world in html
+2. hello world in js
+3. hello world in react
+    cdn links - 2 links
+4. created app.js 
+    React.createElement(tag , attributes , children) - gives object
+    React.createRoot() - create a root for the domNode, and take over managing the DOM inside it
+    root.render(object) - this converts the object to html code.
+5. render() - replace the content in id="root" 
+6. React used in small portion of the code.
