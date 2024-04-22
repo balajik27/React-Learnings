@@ -1,0 +1,140 @@
+npm - not node package manager.
+manages the packages , but not node package manager.
+
+npm - standand package .
+
+package.json - configuration for npm.
+
+Bundlers - packages your app properly and shift to production.
+
+webpack ,parcel(best) , wheat - bundlers.
+
+create-react-app - uses webpack in behind.
+
+npm install -D parcel - why -D?
+npm install parcel
+want parcel as dev dependencies , not as normal dependencies.
+
+
+two types of dependencies
+ - dev dependencies - when developing phase we require this.
+ - normal dependencies - during production we use.
+
+'parcel' : "[^2.8.3]" - ^ if caret symbol is present then it automatically update minor version(2.8.4 , 2.8.5 .. not major version like 2.9.1 , 3.3.3) when it is released.
+
+'parcel' : "[2.8.3]" - if there is no caret , it will not change the version , this is permanent.
+
+package-lock.json ?
+
+keep track of version installed , like a history .
+
+parcel - use babel 
+    - Dev build
+    - Local server
+    - HMR - hot module replacement - when u save automatically shows in page.
+    - File watching algorithm - written in c++.
+    - caching faster builds
+    - Image optimization
+    - Minification - for Minification parcel use other libraries in node modules.
+    - Bundling
+    - Compressing file
+    - consistent hashing.
+    - diffrential bundling - support older browsers.
+    - dianostic -give proper error explain in screeen
+    - error handling.
+    - Tree shading - remove unused code 
+    - Diffrent dev and prod build
+
+parcel have parcel-cache - so this is fast, when u save , i will load fast in upcoming times.
+
+parcel documentation contains all details
+
+
+
+all the packages have own package.json with both dependencies and dev dependencies.
+
+node modules - is a collection of packages or dependencies.
+
+.gitignore - this have the files which should not push into github 
+
+eg : /node_modules
+
+
+npm parcel index.html 
+
+this command run our project in localhost.
+
+import React from 'react'; - 'react' this comes from node_modules.
+
+throws error in normal js file , like Browser scripts cannot have imports or exports.
+
+so include include type="module" <script type="module" src="app.js"></script>
+
+
+-------------------------
+
+npx parcel index.html
+
+it generates development build of your project.
+and put inside dist , use that for hosting in localhost:1234
+
+
+
+
+time consume more when u built for production than development
+
+npx parcel built index.html  - here u mentioned the entry point file so 
+"main": "index.js", - remove this. otherwise throws error.
+
+if any think that u can regenerate then u dont want to put inside github
+
+so
+/node_modules
+/dist
+.parcel-cache 
+
+these files no need to put inside github.
+
+
+----------------------------
+
+
+if u want your react app to run in brower which you like
+
+usign browserslist
+
+
+go to package.json file
+
+"browserslist" : [
+    "last 2 Chrome version",
+    "last 2 Firefox version",
+    "last 2 versions" - all brower last 2 version
+  ]
+
+  definetely run in these browser.but run or might not run in other browsers.
+
+  even u can specifically set for country like u can set 99.5% browser access in us , or specific mobiles .
+
+
+  
+const usingJsx = (
+<h1> 
+    <h2></h2>
+</h1>
+ ) //Jsx -> React Element -> Html element
+//JavaScript XML, or JavaScript Syntax eXtension, 
+
+//Jsx - html like systax
+
+// jsx cant run by browser , browser has only js engine.
+// react cant run .
+
+//Parcel - 1st
+//Babel - 2nd - Jsx - javascript or browser supported js.
+//Vite - 3rd
+
+
+
+
+  
