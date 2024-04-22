@@ -1,0 +1,50 @@
+
+
+JSX - Javascript xml
+jsx - is html like syntax , we use html inside js.
+
+React element -> Html tag
+
+const reactElement = React.creatElement('h1' , {} , "This is react element");
+
+
+jsx -> React element -> Html tag
+
+const jsxElement = <h1>This is jsx element</h1> 
+
+without jsx , by only using react element also we can build react apps.
+
+----------------------------------
+
+Functional Component - is normal js function.
+
+Function that returns react element or jsx is called Functional Component.
+
+with only jsx.
+
+const jsxElement = (
+    <h1>
+        <div>Hello world</div>
+    </h1>
+)
+
+with functional Component
+
+const Func = ()=>{
+    return <h1><div>Hello world</div></h1>
+
+    or 
+
+    return(
+        <h1>
+            <div>Hello world</div>
+        </h1>
+    )
+}
+
+---------------------------------------------
+
+Component composition - using component1 inside another component2.
+
+
+

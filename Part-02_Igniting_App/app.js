@@ -55,21 +55,22 @@ const Func1 = () =>{
             <div>
                 <h3>World inside div</h3>
             </div>
+        
             <Func name ="balaji" />
         </div>
     )
 }
 
+//* this is highlighter
+//! hello 
+//todo :
+//? ewcdvdsv
+
+
 //jsx 
 const usingJsx = (
    <h1>Hello world</h1>
 )
-
-
-
-
-
-
 
 
 
