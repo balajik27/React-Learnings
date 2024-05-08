@@ -1,0 +1,13 @@
+1. Diffrence between state and props?
+
+State - to manage data inside a component.
+Props - data that component receives from parent component.
+
+2. Create new react project?
+
+npx create-react-app app_name
+
+It will create dummy application , bundlers , setup for testing , ready to go live application.
+Packaging content - wrapping the code to make ready to run in production.
+Build - use bundlers , like webpack (created by react) . it compile our project and run in localhost.
+

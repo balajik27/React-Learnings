@@ -132,6 +132,9 @@ const usingJsx = (
 
 //Parcel - 1st
 //Babel - 2nd - Jsx - javascript or browser supported js.
+Babel is a JavaScript compiler that allows developers to write code using the latest JavaScript features (ES6+, ESNext) 
+and then transpile it into older versions of JavaScript for compatibility with older browsers or different versions of Node.js.
+
 //Vite - 3rd
 
 
